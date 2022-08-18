@@ -1,0 +1,149 @@
+@font-face {
+  font-family: Rubik;
+  src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: Rubik-500;
+  src: url(./fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+  font-family: Rubik-700;
+  src: url(./fonts/Rubik-Bold.ttf);
+}
+
+body {
+  font-family: Rubik;
+  font-size: 18px;
+  box-sizing: border-box;
+  --dark-gray: hsl(0, 0%, 59%);
+  --very-dark-gray: hsl(0, 0%, 17%);
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.input-output {
+  background-image: url("./images/pattern-bg.png");
+  padding-inline: 2rem;
+  height: 15rem;
+}
+
+.form-centered {
+  display: flex;
+  justify-content: center;
+
+  form {
+    white-space: nowrap;
+    flex-grow: 1;
+  }
+}
+
+.form-label {
+  font-family: Rubik-500;
+  display: block;
+  text-align: center;
+  padding-top: 0.5rem;
+  color: white;
+}
+
+.form-input {
+  font-size: 0.8em;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  height: 2.2rem;
+  padding-left: 0.8rem;
+  width: calc(100% - 2.2rem);
+
+  &:focus {
+    outline: none;
+  }
+}
+.submit {
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--very-dark-gray);
+  padding: 1.1rem;
+  margin-left: -5px;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg) translateY(-50%);
+  -webkit-transform: rotate(-45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 3px);
+}
+
+.output {
+  margin-top: 2em;
+  background-color: white;
+  padding: 1em 0;
+  border-radius: 8px;
+  text-align: center;
+
+  li {
+    .output-data {
+      font-family: Rubik-500;
+    }
+    &:last-child {
+      .output-data {
+        margin-bottom: 0;
+        color: var(--very-dark-gray);
+      }
+    }
+  }
+}
+
+.data-name {
+  font-family: Rubik-700;
+  color: var(--dark-gray);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 800;
+  margin: 0;
+}
+
+#map {
+  height: calc(100vh - 15rem);
+  z-index: -1;
+}
+
+@media only screen and (min-width: 650px) {
+  .input-output {
+    height: 10rem;
+  }
+
+  form {
+    margin-inline: 20vw;
+  }
+
+  .output {
+    display: flex;
+    justify-content: space-around;
+  }
+  .data-column {
+    width: 100%;
+
+    border-inline: solid 0.5px var(--dark-gray);
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  #map {
+    height: calc(100vh - 10rem);
+  }
+}
