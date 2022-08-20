@@ -1,0 +1,1 @@
+export const FETCH_IP_OR_DOMAIN = "FETCH_IP_OR_DOMAIN";

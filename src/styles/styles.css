@@ -118,9 +118,10 @@ body ul {
   margin: 0;
 }
 
-#map {
+.map {
   height: calc(100vh - 15rem);
   z-index: -1;
+  border: solid 1px red;
 }
 
 @media only screen and (min-width: 650px) {
