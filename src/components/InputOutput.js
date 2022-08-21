@@ -49,7 +49,6 @@ class InputOutput extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <>
         <section className="input-output">

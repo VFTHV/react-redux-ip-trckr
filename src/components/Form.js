@@ -1,17 +1,22 @@
 import React from "react";
+import { Field, reduxForm } from "redux-form";
 
 class Form extends React.Component {
+  onSubmit = (input) => {
+    this.props.onSubmit(input.ip);
+  };
+
   render() {
     return (
       <>
         <div className="form-centered">
-          <form>
+          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
             <label className="form-label" htmlFor="ip-input">
               IP Address Tracker
             </label>
-            <input
-              name="ip=input"
-              id="ip-input"
+            <Field
+              name="ip"
+              component="input"
               type="text"
               placeholder="Search for any IP address or domain"
               className="form-input"
@@ -27,4 +32,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default reduxForm({ form: "form" })(Form);

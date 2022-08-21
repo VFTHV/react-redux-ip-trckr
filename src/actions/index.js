@@ -15,9 +15,9 @@ export const fetchIP = (input) => async (dispatch) => {
   }
   try {
     const response = await ipfy.get(`country,city?apiKey=${apiKey}${link}`);
+
     dispatch({ type: FETCH_IP_OR_DOMAIN, payload: response.data });
   } catch (err) {
     dispatch({ type: FETCH_IP_OR_DOMAIN, payload: err });
-    console.log("ERROR HAPPENED");
   }
 };

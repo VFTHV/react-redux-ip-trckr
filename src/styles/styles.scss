@@ -144,7 +144,8 @@ body {
     }
   }
 
-  #map {
+  .map {
     height: calc(100vh - 10rem);
+    border: solid 2px red;
   }
 }

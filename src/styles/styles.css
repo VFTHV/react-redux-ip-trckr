@@ -148,8 +148,9 @@ body ul {
   .data-column:last-child {
     border-right: none;
   }
-  #map {
+  .map {
     height: calc(100vh - 10rem);
+    border: solid 2px red;
   }
 }
 /*# sourceMappingURL=styles.css.map */
