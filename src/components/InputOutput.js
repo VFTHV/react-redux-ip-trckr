@@ -7,7 +7,7 @@ import { fetchIP } from "../actions";
 
 class InputOutput extends Component {
   componentDidMount() {
-    // this.props.fetchIP();
+    this.props.fetchIP();
   }
 
   renderData = (dataType) => {
@@ -48,6 +48,14 @@ class InputOutput extends Component {
     this.props.fetchIP(input);
   };
 
+  handleCoordinates = () => {
+    if (!this.props.ipfy.location) {
+      return;
+    }
+    const { location } = this.props.ipfy;
+    return [location.lat, location.lng];
+  };
+
   render() {
     return (
       <>
@@ -61,7 +69,7 @@ class InputOutput extends Component {
             <Output dataName="ISP" data={this.renderData("isp")} />
           </ul>
         </section>
-        <Map />
+        <Map coords={this.handleCoordinates()} />
       </>
     );
   }

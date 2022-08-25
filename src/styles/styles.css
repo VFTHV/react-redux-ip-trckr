@@ -120,8 +120,13 @@ body ul {
 
 .map {
   height: calc(100vh - 15rem);
+  position: absolute;
   z-index: -1;
-  border: solid 1px red;
+}
+
+.map .inner-div {
+  height: calc(100vh - 15rem);
+  width: 100vw;
 }
 
 @media only screen and (min-width: 650px) {
@@ -150,7 +155,10 @@ body ul {
   }
   .map {
     height: calc(100vh - 10rem);
-    border: solid 2px red;
+    top: 10rem;
+  }
+  .map .inner-div {
+    height: calc(100vh - 10rem);
   }
 }
 /*# sourceMappingURL=styles.css.map */
