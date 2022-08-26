@@ -45,7 +45,7 @@ class InputOutput extends Component {
   };
 
   onSubmit = (input) => {
-    this.props.fetchIP(input);
+    // this.props.fetchIP(input);
   };
 
   handleCoordinates = () => {

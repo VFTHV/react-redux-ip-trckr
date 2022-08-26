@@ -18,16 +18,19 @@ const Map = (props) => {
   }
 
   return (
-    <div className="map">
-      <MapContainer center={coordinates} zoom={13} scrollWheelZoom={true}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <MyComponent />
-        <div className="inner-div"></div>
-      </MapContainer>
-    </div>
+    // <div className="map">
+    <MapContainer
+      className="map"
+      center={coordinates}
+      zoom={13}
+      scrollWheelZoom={true}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <MyComponent />
+    </MapContainer>
   );
 };
 
