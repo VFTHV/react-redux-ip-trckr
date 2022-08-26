@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Map from "./Map";
-import Form from "./Form";
+import IPForm from "./IPForm";
 import Output from "./Output";
 import { connect } from "react-redux";
 import { fetchIP } from "../actions";
@@ -57,11 +57,12 @@ class InputOutput extends Component {
   };
 
   render() {
+    console.log("render Input Output");
     return (
       <>
         <section className="input-output">
           <h5 className="form-label">{this.renderError()}</h5>
-          <Form onSubmit={this.onSubmit} />
+          <IPForm onSubmit={this.onSubmit} />
           <ul className="output">
             <Output dataName="IPAddress" data={this.renderData("ip")} />
             <Output dataName="Location" data={this.renderData("location")} />

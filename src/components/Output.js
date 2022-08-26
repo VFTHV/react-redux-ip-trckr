@@ -1,6 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-import { fetchIP } from "../actions";
 
 class Output extends React.Component {
   renderData = () => {

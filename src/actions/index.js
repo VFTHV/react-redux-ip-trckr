@@ -3,7 +3,7 @@ import { FETCH_IP_OR_DOMAIN } from "./types";
 import { domainOrIP } from "../functions/domainOrIP";
 
 export const fetchIP = (input) => async (dispatch) => {
-  const apiKey = "at_tcvPspf3lf41NHU5OjHX4QwonW964";
+  const apiKey = "at_ggwhnarseQOACBWtItxIskRMgp6bF";
   let link = "";
   const hasDomain = domainOrIP(input);
   if (!input) {

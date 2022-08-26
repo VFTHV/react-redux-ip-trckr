@@ -12,14 +12,14 @@ const Map = (props) => {
 
   function MyComponent() {
     const map = useMap();
-    map.setView([50.5, 30.5], 13);
+    map.setView(coordinates, 13);
 
     return null;
   }
 
   return (
     <div className="map">
-      <MapContainer center={[50.5, 30.5]} zoom={13} scrollWheelZoom={true}>
+      <MapContainer center={coordinates} zoom={13} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
