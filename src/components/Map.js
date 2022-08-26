@@ -18,7 +18,6 @@ const Map = (props) => {
   }
 
   return (
-    // <div className="map">
     <MapContainer
       className="map"
       center={coordinates}
